@@ -1,4 +1,4 @@
 Author: Kaylyn Lee
 
 Collaborators:
-- I worked alone.
+- The Lab 10 solution code from Canvas was used in main.ml.

@@ -1,4 +1,5 @@
 (executable
  (public_name a7)
  (name main)
- (libraries a7))
+ (libraries a7 lwt.unix)
+ (preprocess (pps lwt_ppx)))
