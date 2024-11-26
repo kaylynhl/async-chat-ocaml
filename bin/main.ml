@@ -29,6 +29,14 @@ let client_handler client_socket_address (client_in, client_out) =
     try%lwt
       let%lwt msg = Lwt_io.read_line client_in in
       let message = Printf.sprintf "%s: %s" username msg in
+
+      (* print msg in server terminal *)
+      let%lwt () =
+        Lwt_io.printlf "Message from %s (%s): %s" username
+          (string_of_sockaddr client_socket_address)
+          msg
+      in
+      (* then broadcast msg *)
       let%lwt () = broadcast client_out message in
       client_msg_loop ()
     with
