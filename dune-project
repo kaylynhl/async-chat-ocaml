@@ -1,26 +1,24 @@
 (lang dune 3.16)
 
-(name a7)
+(name ocaml-lwt-chat)
 
 (generate_opam_files true)
 
 (source
- (github username/reponame))
+ (github kaylynhl/ocaml-lwt-chat))
 
-(authors "Author Name")
+(authors "Kaylyn H")
 
-(maintainers "Maintainer Name")
+(maintainers "Kaylyn H")
 
-(license LICENSE)
-
-(documentation https://url/to/documentation)
+(license "All rights reserved")
 
 (package
- (name a7)
- (synopsis "A short synopsis")
- (description "A longer description")
- (depends ocaml dune)
+ (name ocaml-lwt-chat)
+ (synopsis "Terminal chat application in OCaml using Lwt")
+ (description "A small TCP chat server/client built with OCaml, Lwt, and Dune.")
+ (depends ocaml dune lwt lwt_ppx ounit2)
  (tags
-  (topics "to describe" your project)))
+  (topics "ocaml" "lwt" "networking" "chat")))
 
 ; See the complete stanza docs at https://dune.readthedocs.io/en/stable/reference/dune-project/index.html

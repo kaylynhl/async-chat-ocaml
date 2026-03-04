@@ -1,5 +1,4 @@
 (executable
- (public_name a7)
+ (public_name ocaml-lwt-chat)
  (name main)
- (libraries a7 lwt.unix)
- (preprocess (pps lwt_ppx)))
+ (libraries chat))
